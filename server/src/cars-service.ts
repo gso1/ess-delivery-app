@@ -1,9 +1,11 @@
 import { Car } from "./car";
+import EmailService from "./email-service"
 
 export class CarService {
   cars: Car[] = [];
   idCount: number = 0;
-  
+  emailService: EmailService = new EmailService();
+
   add(car: Car): Car {
     if (this.cars.length >= 10) return null;
     const newCar = new Car(<Car> { id: this.idCount, ...car });
@@ -12,6 +14,12 @@ export class CarService {
     }
     this.cars.push(newCar);
     this.idCount++;
+    
+    this.emailService.sendMail(
+      {name: `${newCar.name}`, email: `car@${newCar.brand}.com`},
+      {subject: `You created a car`, body: `Hello world, ${car.name}!`}
+    );
+
     return newCar;
   }
 
