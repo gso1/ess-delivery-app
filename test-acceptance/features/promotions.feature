@@ -73,14 +73,14 @@ Then o cupom "2CHEDDINHAPOR1" "não aparece" na página de listagem de cupons
 
 Scenario: cadastro de cupom bem-sucedido por administrador
 Given o "admin" "ceb04ad1" está na página de listagem de cupons
-Given o cupom "PRIMEIRACOMPRA" "não aparece" na página de listagem de cupons
-When o "admin" "ceb04ad1" tenta cadastrar o cupom "PRIMEIRACOMPRA" e um desconto de "0.2" com valor mínimo de "30.00" com status "Ativo"
-Then o cupom "PRIMEIRACOMPRA" "é cadastrado"
-Then o cupom "PRIMEIRACOMPRA" "aparece" na página de listagem de cupons
+Given o cupom "SEGUNDACOMPRA" "não aparece" na página de listagem de cupons
+When o "admin" "ceb04ad1" tenta cadastrar o cupom "SEGUNDACOMPRA" e um desconto de "0.2" com valor mínimo de "30.00" com status "Ativo"
+Then o cupom "SEGUNDACOMPRA" "é cadastrado"
+Then o cupom "SEGUNDACOMPRA" "aparece" na página de listagem de cupons
 
-Scenario: remoção de cupom bem sucedida por admin
+Scenario: remoção de cupom bem sucedida por administrador
 Given o "admin" "ceb04ad1" está na página de listagem de cupons
-When o "admin" "ceb04ad1" tenta excluir o cupom "PRIMEIRACOMPRA"  
-Then o cupom "PRIMEIRACOMPRA" "é removido"
-Then o cupom "PRIMEIRACOMPRA" "não aparece" na página de listagem de cupons
+When o "admin" "ceb04ad1" tenta excluir o cupom "SEGUNDACOMPRA"  
+Then o cupom "SEGUNDACOMPRA" "é removido"
+Then o cupom "SEGUNDACOMPRA" "não aparece" na página de listagem de cupons
 
