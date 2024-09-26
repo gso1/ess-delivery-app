@@ -1,0 +1,10 @@
+.buttons-container a.pink-link{
+    padding: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+.buttons-container a.back-link {
+    position: fixed;
+    left: 10rem;
+}

@@ -1,0 +1,42 @@
+<app-bar></app-bar>
+<div class="container">
+  <h2 class="header-home">Inserir Método de Pagamento</h2>
+  <div class="btn">
+    <div style="display: flex;">
+      <div class="buttons-container">
+        <a class="dark-link" (click)="goToCredit()">
+          <img alt="Ícone de cartão de crédito" src="/assets/icons/credit-card.svg"/>
+          Cartão de crédito
+      </a>
+      </div>
+
+      <div class="buttons-container">
+        <a class="dark-link" (click)="goToDebit()">
+          <img alt="Ícone de cartão de crédito" src="/assets/icons/credit-card.svg"/>
+          Cartão de Débito
+        </a>
+      </div>
+    </div>
+    <div style="display: flex;">
+      <div class="buttons-container">
+        <a class="pink-link" (click)="goToPicPay()">
+          <img alt="Ícone de cartão de crédito" src="/assets/icons/key.svg"/>
+          PicPay
+        </a>
+      </div>
+
+      <div class="buttons-container">
+        <a class="pink-link" (click)="goToPayPal()">
+          <img alt="Ícone de cartão de crédito" src="/assets/icons/key.svg"/>
+          PayPal
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="buttons-container">
+  <a class="back-link" (click)="backPage()">
+     <img alt="Ícone de Voltar" src="/assets/icons/arrow-left.svg"/>
+     Voltar
+  </a>
+</div>

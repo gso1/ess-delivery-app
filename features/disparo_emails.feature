@@ -1,7 +1,7 @@
 Scenario: Usuário finaliza o pedido com sucesso.
 Given o usuário "mateuzinho" está na página de confirmação do pedido “001”
 And "mateuzinho" não finalizou o pedido “001” 
-Then o sistema envia um email para sua conta com um comprovante do pedido “001”.
+Then the system envia um email para sua conta com um comprovante do pedido “001” a.
 
 Scenario: Usuário finaliza o pedido com sucesso, mas quer que o e-mail de confirmação seja reenviado.
 Given o usuário “mateuzinho” está na página de pedidos confirmados
@@ -32,12 +32,3 @@ Scenario: Após finalizar o pedido, o cliente quer baixar o comprovante diretame
 Given o usuário “mateuzinho” finaliza o pedido número “001” 
 And o usuario clica no botão de baixar comprovante do pedido “001”
 Then o usuário faz o baixa o comprovante do pedido “001” em pdf.
-
-
-cenario falha
-
-cenario falha 2
-
-cenario novo cenario
-
-cenario novo cenario 2

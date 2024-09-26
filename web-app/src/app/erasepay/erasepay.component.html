@@ -1,0 +1,25 @@
+<app-bar></app-bar>
+<div class="selection" > 
+  <h3>Método a ser removido:</h3>
+  <div>
+     <select class="options" id ="mySelect" [(ngModel)]="mainName" disableRipple>
+        <option *ngFor="let pagamento of user.paymentMethods" [value]="pagamento.name">
+          {{pagamento.name}}
+        </option>
+     </select>
+  </div>   
+</div>
+
+<div class="buttons-container">
+  <a class="pink-link" (click)="deletePay()">
+    Remover método
+    <img alt="Ícone de cartão de débito" src="/assets/icons/trashWhite.svg"/>
+  </a>
+</div>
+
+<div class="buttons-container">
+  <a class="back-link" (click)="backPage()">
+     <img alt="Ícone de Voltar" src="/assets/icons/arrow-left.svg"/>
+     Voltar
+  </a>
+</div>

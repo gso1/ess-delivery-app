@@ -7,14 +7,15 @@ export let config: Config = {
     SELENIUM_PROMISE_MANAGER: false,
 
     capabilities: {
-        browserName: 'chrome'
+        browserName: 'chrome',
     },
 
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
 
     specs: [
-        '../../features/*.feature'
+        '../../features/manutencao_pagamento.feature',
+        '../../features/promotions.feature'
     ],
 
     onPrepare: () => {

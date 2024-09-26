@@ -1,0 +1,56 @@
+.block {
+    border-radius: 0.8rem;
+    background-color: var(--color-primary-dark);
+    padding: 2rem 3rem 1.5rem 3rem;
+    box-shadow: 2px 2px 6px var(--color-primary-darker);
+}
+
+.buttons-container a.confirm-link {
+    margin-top: 2rem;
+    background: var(--color-secondary);
+}
+
+.buttons-container a.confirm-link img {
+    margin-right: 2.5rem;
+}
+
+.buttons-container a.confirm-link:hover {
+    background: var(--color-secondary-dark);
+    transition: background 0.2s;
+}
+
+h2 {
+    color: white;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.status {
+    border-radius: 0.8rem;
+    background-color: var(--color-primary-darker);
+    padding: 2rem;
+    align-items: center;
+    display: flex;
+    color: white;
+}
+
+.checkbox {
+    margin-left: 2rem;
+}
+
+.buttons-container {
+    display: grid;
+}
+
+.confirm-link img {
+    width: 5rem;
+}
+
+.confirm-link,
+.back-link {
+    justify-self: center;
+}

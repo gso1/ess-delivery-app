@@ -1,0 +1,33 @@
+<app-bar></app-bar>
+<h2 class="header-home">Dados do Cartão</h2>
+<div class="forms-block">
+   <div class="input-block" >
+      <input placeholder="Número do Cartão (16) digitos" type="number" [(ngModel)]="metodo.number">
+   </div>
+   <div class="input-block" >
+      <input placeholder="Nome do titular" [(ngModel)]="metodo.name_titular">
+   </div>
+   <div class="input-block">
+      <input placeholder="CVV (3 digitos)" type="number" [(ngModel)]="metodo.cvv" >
+   </div>
+   <div class="input-block">
+      <input placeholder="Bandeira (insira: visa ou master)" [(ngModel)]="metodo.flag" >
+   </div>
+   <div class="input-block">
+      <input placeholder="Apelido do Cartão" [(ngModel)]="metodo.name" >
+   </div>
+   <div class="checkbox"><input type="checkbox" (click)="checar()"><label>Tornar método de pagamento padrão</label></div>
+   <div class="buttons-container">
+      <a class="confirm-link" (click)="sendPost()">
+         <img alt="Ícone de cartão de débito" src="/assets/icons/credit-card.svg"/>
+         Adicionar
+      </a>
+   </div>
+</div>
+
+<div class="buttons-container">
+   <a class="back-link" (click)="backPage()">
+      <img alt="Ícone de Voltar" src="/assets/icons/arrow-left.svg"/>
+      Voltar
+   </a>
+ </div>

@@ -1,0 +1,71 @@
+.container {
+    margin-top: 10rem;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    margin: 1rem 0 0 0;
+    display: flex;
+}
+.header-home {
+    margin-top: 2rem;
+}
+
+.buttons-container a.dark-link,
+.buttons-container a.pink-link, 
+.buttons-container a.leaked-link {
+    text-align: center;
+    padding: 1rem;
+    width: 37rem;
+    height: 9rem;
+    font-size: 2.5rem;
+    justify-self: center;
+    margin: 0;
+}
+
+.buttons-container a.back-link {
+    position: fixed;
+    left: 10rem;
+}
+
+h3 {
+    margin-top: 2rem;
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+
+.selection {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+    margin: 1rem 0rem;
+}
+.options {
+    position: relative;
+    cursor: pointer;
+    width: 20.5rem;
+    height: 6rem;
+    font-size: 1.7rem;
+    font-family: 'DM Sans';
+    font-weight: bold;
+    border-radius: 0.8rem;
+    margin-left: 1rem;
+    align-items: center;
+    text-align: center;
+    color: var(--color-primary-darker);
+    background-color: var(--color-line-in-white);
+    border: none;
+}
+
+option:hover {
+    background-color: var(--color-primary-lighter);
+}
+
+option:checked {
+    display: none;  
+}

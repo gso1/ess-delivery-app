@@ -1,0 +1,78 @@
+<app-bar></app-bar>
+
+<div>
+
+  <!-- =====> email_successfully_sent <===== -->
+  <div *ngIf="email_successfully_sent" class="card">
+    <h2 class="header-home">Pedido Finalizado!</h2>
+    <div class="subtext">
+      <div style="width: 60%; padding-bottom: 1rem;">
+        Te enviamos um e-mail com o comprovante do pedido
+      </div>
+    </div>
+
+    <div class="buttons-container">
+      <a name="voltar_para_o_perfil_button" (click)="toUserProfile()" mat-button class="btn pink-link">Voltar para o
+        perfil</a>
+    </div>
+    <div (click)="showNextScreen1()" class="link">Não recebi nenhum e-mail</div>
+  </div>
+
+
+  <!-- =====> user_wants_to_re_send_email <===== -->
+  <div *ngIf=" user_wants_to_re_send_email" class="card">
+    <h2 class="header-home">Tem certeza?</h2>
+    <div class="subtext">
+      <div style="width: 60%; padding-bottom: 1rem;">
+        Observe se o e-mail se encontra na caixa de spam
+      </div>
+    </div>
+
+
+
+    <div class="buttons-container">
+      <a (click)="sendEmail_and_showNextScreen2()" mat-button class="btn pink-link" style="padding: 1rem;">Re-enviar
+        e-mail com comprovante de
+        pedido</a>
+    </div>
+    <a style="cursor: default;" name="voltar_para_o_perfil_button" class="link" (click)="toUserProfile()">
+      <div class="link" style="cursor: pointer;">Voltar para o perfil</div>
+    </a>
+  </div>
+
+
+  <!-- =====> email_will_be_re_sent_in_24_hours <===== -->
+  <div *ngIf="email_will_be_re_sent_in_24_hours" class="card" style="padding-bottom: 2rem;">
+    <h2 class="header-home">Seu pedido é uma ordem!</h2>
+
+    <div class="subtext">
+      <div style="width: 60%; padding-bottom: 2rem;">
+        Vamos te enviar outro e-mail com o comprovante de pedido em até 24 horas.
+      </div>
+    </div>
+
+
+
+    <div class="buttons-container">
+      <a name="voltar_para_o_perfil_button" (click)="toUserProfile()" mat-button class="btn pink-link">Voltar para o
+        perfil</a>
+    </div>
+  </div>
+
+
+
+  <!-- =====> email_not_successfully_sent <===== -->
+  <div *ngIf="email_not_successfully_sent" class="card" style="padding-bottom: 2rem;">
+    <h2 class="header-home">Pedido Finalizado!</h2>
+    <div class="subtext">
+      <div style="width: 60%; padding-bottom: 1rem;">
+        Você receberá um e-mail com o comprovante de pedido dentro de 24h
+      </div>
+    </div>
+    <div class="buttons-container">
+      <a name="voltar_para_o_perfil_button" (click)="toUserProfile()" mat-button class="btn pink-link">Voltar para o
+        perfil</a>
+    </div>
+  </div>
+
+</div>

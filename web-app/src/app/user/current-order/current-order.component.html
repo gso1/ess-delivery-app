@@ -1,0 +1,65 @@
+<app-bar></app-bar>
+<div class="container">
+  <h2 class="title">Finalização de Pedido</h2>
+  <div class="block-1">
+    <div class="top-block">
+      <h2 class="left cover-pink">Restaurante: {{curOrder.restaurant}}</h2>
+      <div>
+        <div class="div-amount">
+          <h2 class="header-home">Valor do pedido: </h2>
+          <h2 class="header-home amount">{{formatedAmount()}}</h2>
+        </div>
+        <span *ngIf="curOrder.coupon.name != ''">Economizou: {{free}}</span>
+        <label><i>Endereço de entrega: {{curOrder.address}}</i> </label>
+      </div>
+    </div>
+    <div class="cover">
+      <h2 class="left cover">Produtos:</h2>
+    </div>
+    <div class="product-list">
+      <div class="product" *ngFor="let product of curOrder.products">
+        <span>{{product.name}}</span>
+        <div class="input-block">
+          <input name="product-input" placeholder="0" type="number" step="1" min="0" max="10"
+            [(ngModel)]="product.quantity" (input)="updateAmount()" required>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block-2-3">
+    <div class="block-2">
+
+      <div class="payment">
+        <label >Método de pagamento:</label>
+        <div class="block-payment">
+          <select class="options" [(ngModel)]="mainName" disableRipple>
+            <option *ngFor="let payment of data.paymentMethods" [value]="payment.name">
+              {{payment.name}}
+            </option>
+          </select>
+          <img alt="Adicionar metodo de pagamento" src="/assets/icons/plus.svg" />
+        </div>
+      </div>
+    </div>
+    <div *ngIf="curOrder.coupon.name == ''" class="block-3">
+      <div class="input-block coupon"><input placeholder="Cupom" [(ngModel)]="couponName"
+          oninput="this.value = this.value.toUpperCase()" required></div>
+      <img alt="Adicionar cupom" src="/assets/icons/plus.svg" (click)="insertCoupon()" />
+    </div>
+    <div *ngIf="curOrder.coupon.name != ''" class="block-3 withBackground">
+      <label>{{curOrder.coupon.name}}</label>
+      <img alt="Excluir cupom" src="/assets/icons/trashWhite.svg" (click)="removeCoupon()" />
+    </div>
+  </div>
+  <div class="buttons-container">
+    <a class="pink-link" name="finish_order_button" (click)=confirmOrder()>
+      <img alt="Finalizar pedido" src="/assets/icons/check.svg" />
+      Finalizar pedido
+    </a>
+    <a class="back-link" (click)="back()">
+      <img alt="Ícone de seta para esquerda" src="/assets/icons/arrow-left.svg" />
+      Voltar
+    </a>
+  </div>
+</div>
+<!-- botao de finalizar pedido -->

@@ -1,0 +1,68 @@
+.buttons-container a.dark-link,
+.buttons-container a.pink-link,
+.buttons-container a.leaked-link {
+    width: 32rem;
+    height: 9rem;
+
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.buttons-container a.dark-link img,
+.buttons-container a.leaked-link img {
+    width: 3rem;
+}
+
+.buttons-container a.pink-link {
+    padding: 0 3rem 0 3rem;
+}
+
+
+.buttons-container a.pink-link img {
+    width: 4rem;
+    margin-right: 0;
+}
+
+.container {
+    justify-self: center;
+}
+
+
+
+/* NEW */
+h2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.card {
+    background-color: #5D5ED0;
+    border-radius: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.subtext {
+    text-align: center;
+    color: rgb(224, 224, 224);
+
+    /* center anything inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link {
+    width: auto;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgb(201, 201, 201);
+    text-align: center;
+
+    padding-bottom: 1rem;
+}
+
+a:hover {
+    cursor: pointer;
+}

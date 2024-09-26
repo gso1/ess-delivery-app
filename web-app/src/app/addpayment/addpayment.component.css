@@ -1,0 +1,19 @@
+.buttons-container a.pink-link,
+.buttons-container a.dark-link{
+    padding: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    margin-top: 6rem;
+}
+
+.btn {
+    display: grid;
+}
+
+.buttons-container a.back-link {
+    position: fixed;
+    left: 10rem;
+}

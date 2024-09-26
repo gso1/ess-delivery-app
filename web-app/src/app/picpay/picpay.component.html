@@ -1,0 +1,24 @@
+<app-bar></app-bar>
+<h2 class="header-home">Dados PicPay</h2>
+<div class="forms-block">
+  <div class="input-block">
+     <input placeholder="Insira o nome do usuário"  >
+  </div>
+  <div class="input-block">
+     <input placeholder="Insira o E-mail" [(ngModel)]="metodo.email" >
+  </div>
+  <div class="checkbox"><input type="checkbox" (click)="checar()"><label>Tornar método de pagamento padrão</label></div>
+  <div class="buttons-container">
+     <a class="confirm-link" (click)="sendPost()">
+        <img alt="Ícone de cartão de crédito" src="/assets/icons/credit-card.svg"/>
+        Adicionar
+     </a>
+  </div>
+</div>
+
+<div class="buttons-container">
+   <a class="back-link" (click)="backPage()">
+      <img alt="Ícone de Voltar" src="/assets/icons/arrow-left.svg"/>
+      Voltar
+   </a>
+ </div>

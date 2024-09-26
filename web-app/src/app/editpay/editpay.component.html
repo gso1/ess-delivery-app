@@ -1,0 +1,51 @@
+<app-bar></app-bar>
+<div class="selection" > 
+  <h3>Método a ser Editado:</h3>
+  <div>
+     <select class="options" id ="mySelect" [(ngModel)]="mainName" (ngModelChange)="onChange($event)" disableRipple >
+        <option *ngFor="let pagamento of user.paymentMethods" [value]="pagamento.name">
+          {{pagamento.name}}
+        </option>
+     </select>
+  </div>   
+</div>
+
+
+<div *ngIf = "mainPay.type == 'Cartao de Credito' || mainPay.type == 'Cartao de Debito'">
+<h2 class="header-home">Não é possível editar cartões</h2>
+<div class="forms-block">
+   
+   <div class="buttons-container">
+      <a class="back-link" (click)="backPage()">
+         <img alt="Ícone de Voltar" src="/assets/icons/arrow-left.svg"/>
+         Voltar
+      </a>
+    </div>
+</div>
+</div>
+
+<div *ngIf = "mainPay.type == 'PicPay' || mainPay.type == 'PayPal'">
+  <h2 class="header-home">Dados</h2>
+  <div class="forms-block">
+    <div class="input-block">
+       <input placeholder="Insira o nome do usuário"  >
+    </div>
+    <div class="input-block">
+       <input placeholder="Insira o E-mail" [(ngModel)]="metodo.email" >
+    </div>
+</div>
+
+<div class="buttons-container">
+  <a class="confirm-link" (click)="editPay()">
+     <img alt="Ícone de cartão de débito" src="/assets/icons/trash.svg"/>
+     Editar método
+  </a>
+  
+</div>
+
+<div class="buttons-container">
+   <a class="back-link" (click)="backPage()">
+      <img alt="Ícone de Voltar" src="/assets/icons/arrow-left.svg"/>
+      Voltar
+   </a>
+ </div>

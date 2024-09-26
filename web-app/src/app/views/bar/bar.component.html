@@ -1,0 +1,18 @@
+<div class="bar">
+
+  <div mat-button class="logo-container" name="home" (click)="goToHome()">
+    <img alt="Logo" src="/assets/images/logo.svg" />
+  </div>
+
+  <!-- <div class="profile" (click)="goToProfile(data.id)" style="cursor: pointer;">    //TODO: to enable this functionality, the best thing would be to make different types of profiles, so we can know beforehand which route to go. This is not a main priority, so it should be implemented only if we are given more time.-->
+  <div class="profile">
+    <div class=" info">
+      <label>{{data.name}}</label> <!-- {{name}}-->
+      <span>ID#{{data.id}}</span> <!-- ID#{{id}}-->
+    </div>
+    <div class="user image" name="profile">
+      <img alt="User Profile" src="/assets/images/user-profile.png" /> <!-- src="/assets/images/{{img}}""-->
+    </div>
+  </div>
+
+</div>
